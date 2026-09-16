@@ -1,0 +1,73 @@
+/* StreamlitApp/assets/style.css */
+
+/* Style pour les grands titres de page (H1 / st.title) */
+h1 {
+    color: #1E293B !important; /* Bleu nuit*/
+    font-weight: 700 !important;
+    padding-bottom: 0.2rem !important;
+}
+
+/* Style pour les titres de sections (H3 / ### / st.subheader) */
+h3 {
+    color: #0F172A !important;
+    font-weight: 600 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0.5rem !important;
+    border-bottom: 1px solid #E2E8F0; /* Petite ligne discrète sous chaque titre de graphique */
+    padding-bottom: 0.4rem;
+}
+
+/* Harmonisation des st.caption / descriptions grises */
+.stCaption {
+    font-size: 0.95rem !important;
+    color: #475569 !important; /* Gris ardoise doux */
+    line-height: 1.5 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Optionnel : Amélioration des blocs d'information (st.info) */
+.stAlert {
+    border-radius: 8px !important;
+    border: 1px solid #E2E8F0 !important;
+}
+
+.stMarkdown p {
+    font-size: 1.05rem !important;    
+    color: #334155 !important;     
+    line-height: 1.6 !important;      
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+/* 2. Style spécifique pour le texte mis en gras (**texte**) dans tes markdowns */
+.stMarkdown strong {
+    color: #0F172A !important;         /* Un noir plus profond pour faire ressortir les mots-clés */
+    font-weight: 600 !important;
+}
+
+/* 3. Style spécifique pour les listes à puces (* point 1) dans tes markdowns */
+.stMarkdown ul {
+    padding-left: 1.5rem !important;   /* Alignement propre des puces */
+    margin-bottom: 1rem !important;
+}
+
+.stMarkdown li {
+    color: #334155 !important;
+    margin-bottom: 0.4rem !important;  /* Espacement agréable entre chaque puce */
+}
+
+/* --- TOUCHE PRO POUR L'IMAGE DE LA SIDEBAR --- */
+[data-testid="stSidebar"] .stImage img {
+    border-radius: 12px !important;            /* Des angles arrondis élégants */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important; /* Une ombre subtile pour donner du relief */
+    transition: all 0.4s ease-in-out !important; /* Transition fluide pour l'effet de survol */
+    filter: grayscale(10%) !important;         /* Légère désaturation pour un look plus corporate */
+    border: 1px solid rgba(226, 232, 240, 0.8) !important; /* Un fin contour gris clair très propre */
+}
+
+/* --- EFFET AU SURVOL (HOVER EFFECT) --- */
+[data-testid="stSidebar"] .stImage img:hover {
+    transform: translateY(-4px) scale(1.02) !important; /* L'image s'élève et grossit très légèrement */
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15) !important; /* L'ombre devient plus profonde */
+    filter: grayscale(0%) !important;          /* L'image reprend 100% de ses couleurs vives */
+    cursor: pointer;                           /* Le curseur devient une main cliquable */
+}
