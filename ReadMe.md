@@ -10,7 +10,7 @@
 
 - Naviguez jusqu'à ce dossier :
   ```
-  cd Projet_AI_Job_Impact_WidedMECHLAOUI_sunrise\StreamlitApp
+  cd StreamlitApp
   ```
 - Vérifiez que vous voyez bien les fichiers de ce dépôt lorsque vous exécutez `ls`.
 
