@@ -21,8 +21,6 @@ df_ai = clean_columns(df_ai)
 df_future_jobs = clean_columns(df_future_jobs)
 df_isoc = clean_columns(df_isoc)
 
-#suppression de valeurs vides
-df_isoc=df_isoc.dropna()    # supprimer les lignes contenant des valeurs vides
 
 # NETTOYAGE df_ai--------------------------------------------------------
 # Harmonisation : niveaux d’éducation
@@ -79,7 +77,6 @@ risk_mapping = {
 }
 
 
-
 df_ai["ai_risk_score_std"] = df_ai["automation_risk"].str.lower().map(risk_mapping)
 
 # NETTOYAGE df_future_jobs--------------------------------------------------------
@@ -94,7 +91,7 @@ df_future_jobs["job_title_std"] = (
 df_future_jobs["primary_skill_std"] = (
     df_future_jobs["primary_skill"].str.strip().str.lower().str.replace(" ", "_")
 )
-
+# Harmonisation  ai_risk_score_std(Dataset 1 ↔ Dataset 2)
 risk_mapping_future = {
     "low risk": 1,
     "medium risk": 2,
@@ -231,7 +228,7 @@ df_isoc_long["skill_level"] = (
     .map(level_mapping)
 )
 
-df_isoc_long=df_isoc_long.dropna()
+
 df_isoc_long=df_isoc_long.drop_duplicates()
 
 # Ajout de clés techniques
