@@ -18,7 +18,7 @@ def generate_risky_industries_chart(df):
     fig.update_layout(
         yaxis=dict(categoryorder="total ascending"),
         height=450,
-        xaxis_title="Score de risque moyen (0 à 1)",
+        xaxis_title="Score de risque moyen (0 à 3)",
         yaxis_title="",
         margin=dict(l=20, r=20, t=30, b=20),
         plot_bgcolor="rgba(0,0,0,0)"

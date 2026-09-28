@@ -8,8 +8,8 @@ def generate_dynamic_bubble_chart(df):
     # Étape de sécurité : s'assurer que les volumes de postes sont bien numériques
     df["job_openings"] = df["job_openings"].astype(float)
     
-    # 🌟 CORRECTION DU DIAMÈTRE MAX : On monte à 90 pour laisser respirer le contraste
-    DIAMETRE_MAX = 50
+    # 🌟 CORRECTION DU DIAMÈTRE MAX : On monte à 70 pour laisser respirer le contraste
+    DIAMETRE_MAX = 60
     
     # CALCUL DYNAMIQUE DU SIZEREF : Basé sur le nouveau diamètre maximal
     max_openings = df["job_openings"].max() if not df.empty else 1
@@ -35,9 +35,9 @@ def generate_dynamic_bubble_chart(df):
             "experience_level": True
         },
         color_discrete_map={
-            "High Risk": "#EF4444",    # Rouge vif et pro
-            "Medium Risk": "#F59E0B",  # Orange vif et pro
-            "Low Risk": "#10B981"      # Vert vif et pro
+            "High Risk": "#EF4444",    # Rouge vif
+            "Medium Risk": "#F59E0B",  # Orange vif
+            "Low Risk": "#10B981"      # Vert vif
         },
         category_orders={"risk_level": ["Low Risk", "Medium Risk", "High Risk"]}
     )

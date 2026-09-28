@@ -25,7 +25,7 @@ def generate_promising_jobs_chart(df):
         yaxis_title="Salaire Moyen ($)",
         margin=dict(l=20, r=20, t=30, b=20),
         plot_bgcolor="rgba(0,0,0,0)",
-        coloraxis_showscale=False 
+        coloraxis_showscale=True
     )
     
     # Grille de lecture discrète
